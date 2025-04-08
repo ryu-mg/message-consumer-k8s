@@ -1,1 +1,1 @@
-# django-k8s
+# message-consumer-k8s
