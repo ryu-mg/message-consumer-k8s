@@ -2,8 +2,9 @@ module github.com/ryu-mg/message-consumer-k8s
 
 go 1.22.5
 
+require github.com/IBM/sarama v1.45.1
+
 require (
-	github.com/IBM/sarama v1.45.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/eapache/go-resiliency v1.7.0 // indirect
 	github.com/eapache/go-xerial-snappy v0.0.0-20230731223053-c322873962e3 // indirect
