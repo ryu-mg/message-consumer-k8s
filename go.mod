@@ -1,6 +1,6 @@
 module github.com/ryu-mg/message-consumer-k8s
 
-go 1.22.5
+go 1.24.2
 
 require github.com/IBM/sarama v1.45.1
 
