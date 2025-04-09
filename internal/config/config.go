@@ -1,5 +1,10 @@
 package config
 
+import (
+	"os"
+	"strings"
+)
+
 type Config struct {
 	KafkaBrokers []string
 	Topic        string
@@ -7,8 +12,12 @@ type Config struct {
 }
 
 func LoadConfig() *Config {
+	brokers := os.Getenv("KAFKA_BROKERS")
+	if brokers == "" {
+		brokers = "localhost:9092"
+	}
 	return &Config{
-		KafkaBrokers: []string{"localhost:9092"}, // 기본값
+		KafkaBrokers: strings.Split(brokers, ","),
 		Topic:        "test-topic",
 		GroupID:      "test-group",
 	}
