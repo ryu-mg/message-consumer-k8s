@@ -34,6 +34,8 @@ func (c *Consumer) Start() error {
 	handler := &ConsumerGroupHandler{}
 	ctx := context.Background()
 
+	log.Println("Consumer started")
+
 	for {
 		if err := c.consumer.Consume(ctx, []string{c.config.Topic}, handler); err != nil {
 			log.Printf("Error from consumer: %v", err)
